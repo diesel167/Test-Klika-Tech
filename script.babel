@@ -1,0 +1,36 @@
+var DataTable = ReactDataComponents.DataTable;
+var items;
+$.getJSON("https://api.myjson.com/bins/sml9c", function (data)
+      {
+      
+          items=data.songs;
+          var data = [];
+          for (var i = 0; i < items.length; i++) 
+            {
+
+              data.push({
+                          id:i,
+                          artist: items[i].artist,
+                          title: items[i].title,
+                          year: items[i].year
+                      });
+             };
+
+          var columns = [
+                          { title: 'Artist', prop: 'artist'  },
+                          { title: 'Title', prop: 'title' },
+                          { title: 'Year', prop: 'year' }
+                        ];
+
+          ReactDOM.render((
+              <DataTable
+                className="container"
+                keys="id"
+                columns={columns}
+                initialData={data}
+                initialPageLength={5}
+                initialSortBy={{ prop: 'artist', order: 'ascending'}}
+                pageLengthOptions={[ 10, 25, 50, 100]}
+              />), document.getElementById('root'));
+  
+    });
