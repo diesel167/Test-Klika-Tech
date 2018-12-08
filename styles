@@ -1,3 +1,3 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-alpha/css/bootstrap.min.css" rel="stylesheet" />
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" />
-<link href="https://cdn.rawgit.com/carlosrocha/react-data-components/v1.0.0/css/table-twbs.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/gh/carlosrocha/react-data-components@v1.0.0/css/table-twbs.css" rel="stylesheet" />
